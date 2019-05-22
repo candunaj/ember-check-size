@@ -38,8 +38,8 @@ const checkSize = Modifier.extend({
     scheduleCheck(){
         let timerId = requestAnimationFrame(()=>{
             let boxSizing = (getComputedStyle ? getComputedStyle(this.element).getPropertyValue('box-sizing') : 'content-box');
-            let height = this.element.clientHeight - (boxSizing==='content-box' ? parseInt(this.element.style.paddingTop) + parseInt(this.element.style.paddingBottom) : 0);
-            let width = this.element.clientWidth - (boxSizing==='content-box' ? parseInt(this.element.style.paddingLeft) + parseInt(this.element.style.paddingRight) : 0);
+            let height = this.element.clientHeight - (boxSizing==='content-box' ? (parseInt(this.element.style.paddingTop)||0) + (parseInt(this.element.style.paddingBottom)||0) : 0);
+            let width = this.element.clientWidth - (boxSizing==='content-box' ? (parseInt(this.element.style.paddingLeft)||0) + (parseInt(this.element.style.paddingRight)||0) : 0);
 
             if(height!==this.get('height')){
                 this.set('height', height);
