@@ -1,2 +1,2 @@
-import checkSize from 'ember-check-viewport/modifiers/check-size';
+import checkSize from 'ember-check-size/modifiers/check-size';
 export default checkSize;
