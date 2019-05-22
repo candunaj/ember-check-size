@@ -1,0 +1,9 @@
+Width: {{width}}<br/>
+Height: {{height}}
+{{input type="checkbox" checked=enabled}}
+<div {{check-size 
+        enabled=enabled
+        onHeightChanged=(action (mut height))
+        onWidthChanged=(action (mut width))
+        }} style='background-color:brown; height:200px; margin:10px; padding:5px; {{if enabled "" (concat "width:" width "px;")}}'>
+</div>

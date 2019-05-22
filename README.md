@@ -14,7 +14,12 @@ ember install ember-check-size
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+&lt;div {{check-size 
+        enabled=enabled
+        onHeightChanged=(action (mut height))
+        onWidthChanged=(action (mut width))
+        }} style='background-color:brown; height:200px; margin:10px; padding:5px; {{if enabled "" (concat "width:" width "px;")}}'&gt;
+&lt;/div&gt;
 
 
 Contributing
